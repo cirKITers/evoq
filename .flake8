@@ -1,0 +1,15 @@
+[flake8]
+statistics = True
+max-line-length = 80
+ignore = 
+    # line too long
+    E501, 
+    # assert False
+    B011, 
+    # line break before binary operator
+    W503
+select = C,E,F,W,B,B9
+exclude = docs,.svn,CVS,.bzr,.hg,.git,__pycache__,.tox,.eggs,*.egg
+per-file-ignores =
+    # imported but unused
+    __init__.py: F401
