@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evoq"
+version = "0.1.0"
+authors = [
+    {name = "Eileen Kuehn", email = "eileen.kuehn@kit.edu"},
+    {name = "Max Fischer", email = "max.fischer@kit.edu"},
+]
+description = "Evolutionary algorithms for quantum architecture search"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+license = {"file" = "LICENSE"}
+keywords = ["quantum computing", "evolutionary algorithm", "pennylane"]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "flake8",
+    "flake8-bugbear",
+    "black; implementation_name=='cpython'",
+    "coverage",
+    "pytest-cov",
+]
+doc = ["sphinx"]
+
+[project.urls]
+Source = "https://github.com/cirkiters/evoq"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
